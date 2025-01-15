@@ -25,7 +25,11 @@ export class MainPageComponent  {
   ];
 
   onNewCharacter(character: Character): void {
-    console.log("mainpage --->", character);
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter(index: number): void {
+    this.characters.splice(index,1);
   }
 
 }
